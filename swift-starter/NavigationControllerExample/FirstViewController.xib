@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="NavigationControllerExample" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="paf-Vd-v7R" id="Oc0-VM-jLl"/>
+                <outlet property="label" destination="rVN-FP-7Eq" id="xwW-dA-Uv3"/>
+                <outlet property="textArea" destination="Kzp-ue-rNK" id="yQa-dB-6wP"/>
                 <outlet property="view" destination="iN0-l3-epB" id="DmR-j0-Wfl"/>
             </connections>
         </placeholder>
@@ -18,26 +21,34 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-FP-7Eq">
-                    <rect key="frame" x="186" y="234" width="85" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paf-Vd-v7R">
+                    <rect key="frame" x="184" y="229" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="onTouch:" destination="-1" eventType="touchUpInside" id="UXK-EJ-ohb"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzp-ue-rNK">
+                    <rect key="frame" x="139.5" y="187" width="135.5" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-FP-7Eq">
+                    <rect key="frame" x="164.5" y="295" width="85" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paf-Vd-v7R">
-                    <rect key="frame" x="184" y="278" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder Text" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzp-ue-rNK">
-                    <rect key="frame" x="159" y="348" width="97" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Kzp-ue-rNK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mcu-jB-A24"/>
+                <constraint firstItem="paf-Vd-v7R" firstAttribute="top" secondItem="Kzp-ue-rNK" secondAttribute="bottom" constant="8" id="TMq-nt-mSP"/>
+                <constraint firstItem="rVN-FP-7Eq" firstAttribute="top" secondItem="paf-Vd-v7R" secondAttribute="bottom" constant="36" id="UX6-H3-QcH"/>
+                <constraint firstItem="paf-Vd-v7R" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XMQ-tl-gbf"/>
+                <constraint firstItem="Kzp-ue-rNK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="143" id="vM0-re-31V"/>
+                <constraint firstItem="rVN-FP-7Eq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wzT-hM-xB4"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="139" y="95"/>
         </view>

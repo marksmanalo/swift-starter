@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import RxSwift
 
 class FirstViewController: UIViewController {
+  
+  @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var button: UIButton!
+
+  @IBOutlet weak var textArea: UITextField!
+  
+  private let disposeBag = DisposeBag()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     print("first view controller loaded")
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -21,5 +31,19 @@ class FirstViewController: UIViewController {
     print("first view controller appeared")
     
   }
+  
+  @IBAction func onTouch(_ sender: Any) {
+    
+    print("button touched")
+    label.text = textArea.text
+    
+  }
 
+}
+
+// MARK: - Helpers
+
+extension FirstViewController {
+  
+  
 }
