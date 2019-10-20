@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.backgroundColor = UIColor.white
 
     let firstViewController = FirstViewController()
-    let mainNavigationController = MainNavigationController(rootViewController: firstViewController)
+    let mainNavigationController = MainNavigationViewController(rootViewController: firstViewController)
     
     // Set the root view controller of the app's window
     window!.rootViewController = mainNavigationController

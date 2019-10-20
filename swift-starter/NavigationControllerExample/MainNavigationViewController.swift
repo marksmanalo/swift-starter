@@ -8,6 +8,12 @@
 
 import UIKit
 
-class MainNavigationController: UINavigationController {
+class MainNavigationViewController: UINavigationController {
+  
+  override func viewWillAppear(_ animated: Bool) {
+    
+    print("view appeared")
+    
+  }
   
 }
