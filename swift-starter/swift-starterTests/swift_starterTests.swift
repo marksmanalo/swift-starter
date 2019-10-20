@@ -2,8 +2,8 @@
 //  swift_starterTests.swift
 //  swift-starterTests
 //
-//  Created by Mark S. Manalo on 10/16/19.
-//  Copyright © 2019 Mark S. Manalo. All rights reserved.
+//  Created by Mark S. Manalo on 10/19/19.
+//  Copyright © 2019 Mark Manalo. All rights reserved.
 //
 
 import XCTest

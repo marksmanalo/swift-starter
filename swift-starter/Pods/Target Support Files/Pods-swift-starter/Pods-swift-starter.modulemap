@@ -1,6 +1,0 @@
-framework module Pods_swift_starter {
-  umbrella header "Pods-swift-starter-umbrella.h"
-
-  export *
-  module * { export * }
-}
