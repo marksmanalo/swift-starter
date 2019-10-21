@@ -7,11 +7,30 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  
+  let container: Container = {
+      let container = Container()
+    
+      container.register(FirstViewControllerViewModelProtocol.self) { _ in
+        FirstViewControllerViewModel()
+      }
+    
+      container.register(FirstViewController.self) { resolver in
+        let viewController = FirstViewController()
+        let viewModel = resolver.resolve(FirstViewControllerViewModelProtocol.self)!
+        viewController.viewModel = viewModel
+    
+        return viewController
+      }
+
+      return container
+  }()
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set Background Color of window
     window?.backgroundColor = UIColor.white
 
-    let firstViewController = FirstViewController()
+    let firstViewController = container.resolve(FirstViewController.self)!
     let mainNavigationController = MainNavigationViewController(rootViewController: firstViewController)
     
     // Set the root view controller of the app's window
@@ -57,5 +76,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
 
+}
+
+extension AppDelegate {
+
+  static var shared: AppDelegate? {
+
+    guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
+
+      return nil
+
+    }
+
+    return delegate
+
+  }
 }
 

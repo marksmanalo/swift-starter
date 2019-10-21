@@ -13,11 +13,11 @@ class FirstViewController: UIViewController {
   
   @IBOutlet weak var label: UILabel!
   @IBOutlet weak var button: UIButton!
-
   @IBOutlet weak var textArea: UITextField!
   
   private let disposeBag = DisposeBag()
   
+  var viewModel: FirstViewControllerViewModelProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
