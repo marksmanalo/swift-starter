@@ -10,17 +10,21 @@ class NotificationCenterAPISpec: QuickSpec {
 
   override func spec() {
 
-    describe("A service") {
+    describe("A view model") {
 
-      //var myService: MyService!
+      var viewModel: FirstViewControllerViewModelProtocol!
 
       context("when doing stuff") {
         
         beforeEach {
           
+          viewModel = FirstViewControllerViewModel()
+          
         }
         
         it("should do the stuff") {
+          
+          expect(viewModel).toNot(beNil())
           
         }
 
