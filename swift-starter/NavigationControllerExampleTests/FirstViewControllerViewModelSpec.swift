@@ -6,7 +6,7 @@ import Quick
 import RxSwift
 import RxTest
 
-class NotificationCenterAPISpec: QuickSpec {
+class FirstViewControllerViewModelSpec: QuickSpec {
 
   override func spec() {
 
