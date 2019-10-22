@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol MyServiceProtocol {
+  
+  func helloWorld() -> String
+  
+}

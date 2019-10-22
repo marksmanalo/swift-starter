@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class MyService: MyServiceProtocol {
+  
+  func helloWorld() -> String {
+    
+    return "Hello World"
+    
+  }
+  
+}
